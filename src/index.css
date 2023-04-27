@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #000300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --main: #000300;
+  --accent: #00df9a;
+}
+
+.button{
+@apply bg-[var(--accent)] rounded-md font-medium my-6 mx-auto py-3 text-black w-48 hover:bg-gray-100;
+}
+
+.button-black{
+  @apply bg-[var(--main)] text-[var(--accent)] hover:text-[var(--main)] md:mx-0
 }
